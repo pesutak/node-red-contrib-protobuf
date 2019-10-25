@@ -34,10 +34,12 @@ ${msg.protobufType}
             }
             // check if msg.payload is a valid message under respective
             // selected protobuf message type
+            /* bug in original repo
             let result = messageType.verify(msg.payload);
             if (result) {
                 return node.error('Message is not valid under selected message type. ' + result);
             }
+            */
             return messageType;
         };
 
